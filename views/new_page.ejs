@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div id="books_display">
+        <div id="book-cover">
+            <h1 id="book-title">
+                <%= book.book_name %>
+            </h1>
+            <% var urlofimg='https://covers.openlibrary.org/b/OLID/' + book.book_id + '-L.jpg' ; %>
+                <img src="<%= urlofimg %>" alt="Book Cover">
+                <div id="star">
+                    <% for(let i=0; i<book.book_rating; i++){ %>
+                        <h1 id="star-emoji">⭐️</h1>
+                        <% } %>
+
+                </div>
+        </div>
+        <div id="books_details">
+            <p id="book-review">
+                <%= book.book_review%>
+            </p>
+            <div id="book_publication">
+                <h3 id="book_det" class="author">
+                    <%= book.author %>
+                </h3>
+                <h3 id="book_det" class="publisher">
+                    <%= book.publisher %>
+                </h3>
+                <h3 id="book_det" class="nofpages">
+                    <%= book.nofpages%>
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+#Title{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 30px;
+    background-color: rgba(30, 28, 28, 0.6); 
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+}
+
+#book-img{
+    display: flex;
+    gap: 30px;
+    padding-top: 150px;
+}
+
+body{
+    background-image: url(img/book-home.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img{
+    border-radius: 20px;
+}
+
+img:hover {
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 8px; 
+}

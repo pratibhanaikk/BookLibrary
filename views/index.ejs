@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="/style-home.css">
+</head>
+
+<body>
+    <h1 id = 'Title'>Book Library</h1>
+
+    <div id="book-img">
+    <% book.forEach(element=> { %>
+        <% var urlofimg='https://covers.openlibrary.org/b/OLID/' + element.book_id + '-L.jpg' ; %>
+        <% var id = element.id %>
+        <a href="fetchdata/<%= id %>"><img src="<%= urlofimg %>" alt="Book Cover"></a>
+    <% }); %>
+    </div>
+</body>
+
+</html>
